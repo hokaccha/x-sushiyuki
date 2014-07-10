@@ -1,0 +1,60 @@
+<template id="tmpl-x-sushiyuki">
+  <style>
+    .sushiyuki {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      display: inline-block;
+    }
+    .body {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .label {
+      position: absolute;
+      display: inline-block;
+      top: 150px;
+      left: 50px;
+      width: 80px;
+      background: #FFF;
+      padding: 5px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+  </style>
+
+  <span class="sushiyuki">
+    <span class="body"><img width="200" height="200"></span>
+    <span class="label"><content></content></span>
+  </span>
+</template>
+
+<script>
+var proto = Object.create(HTMLElement.prototype);
+var currentScript = document._currentScript || document.currentScript;
+var doc = currentScript.ownerDocument;
+var template = doc.querySelector('#tmpl-x-sushiyuki');
+var cwd = getCwd();
+
+proto.createdCallback = function() {
+  var shadow = this.createShadowRoot();
+  var tmpl = document.importNode(template.content, true);
+  var type = this.getAttribute('type');
+  var img = tmpl.querySelector('.body img');
+
+  img.src = cwd + '/img/sarayuki_' + type + '.png';
+  img.alt = type;
+
+  shadow.appendChild(tmpl);
+};
+
+document.registerElement('x-sushiyuki', { prototype: proto });
+
+function getCwd() {
+  var a = document.createElement('a');
+  a.href = doc.baseURI;
+
+  return a.origin + a.pathname.replace(/\/[^\/]*$/, '');
+}
+</script>

@@ -1,0 +1,22 @@
+{
+  "name": "x-sushiyuki",
+  "version": "0.0.0",
+  "authors": [
+    "Kazuhito Hokamura <k.hokamura@gmail.com>"
+  ],
+  "description": "Web components x-sushiyuki element",
+  "main": "x-sushiyuki.html",
+  "keywords": [
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#~0.3.3"
+  }
+}

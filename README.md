@@ -6,7 +6,7 @@ A `x-sushiyuki` elememt using Web Components.
 
 ## Example
 
-http://hokaccha.github.io/x-sushiyuki/
+http://hokaccha.github.io/x-sushiyuki/example/index.html
 
 ## Todo
 

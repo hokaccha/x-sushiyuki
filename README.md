@@ -4,6 +4,23 @@ A `x-sushiyuki` elememt using Web Components.
 
 ![image](https://cloud.githubusercontent.com/assets/39471/3540084/e42ba2c0-083f-11e4-9544-6b73cf289337.png)
 
+## Usage
+
+load modules.
+
+```html
+<script src="../bower_components/platform/platform.js"></script>
+<link rel="import" href="../x-sushiyuki.html">
+```
+
+`<x-sushiyuki>` is available!
+
+```html
+<x-sushiyuki type="uni">うに</x-sushiyuki>
+<x-sushiyuki type="ika">烏賊</x-sushiyuki>
+<x-sushiyuki type="kappa">かっぱ巻き</x-sushiyuki>
+```
+
 ## Example
 
 http://hokaccha.github.io/x-sushiyuki/example/index.html

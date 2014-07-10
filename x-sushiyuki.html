@@ -31,6 +31,8 @@
 </template>
 
 <script>
+(function() {
+
 var proto = Object.create(HTMLElement.prototype);
 var currentScript = document._currentScript || document.currentScript;
 var doc = currentScript.ownerDocument;
@@ -57,4 +59,6 @@ function getCwd() {
 
   return a.origin + a.pathname.replace(/\/[^\/]*$/, '');
 }
+
+})();
 </script>

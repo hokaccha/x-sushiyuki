@@ -6,11 +6,17 @@ A `x-sushiyuki` elememt using Web Components.
 
 ## Usage
 
+bower install.
+
+```
+$ bower install hokaccha/x-sushiyuki
+```
+
 load modules.
 
 ```html
-<script src="platform.js"></script> <!-- Polymer/platform -->
-<link rel="import" href="x-sushiyuki.html">
+<script src="bower_components/platform/platform.js"></script>
+<link rel="import" href="bower_components/x-sushiyuki/x-sushiyuki.html">
 ```
 
 `<x-sushiyuki>` is available!

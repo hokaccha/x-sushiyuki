@@ -37,7 +37,7 @@ var proto = Object.create(HTMLElement.prototype);
 var currentScript = document._currentScript || document.currentScript;
 var doc = currentScript.ownerDocument;
 var template = doc.querySelector('#tmpl-x-sushiyuki');
-var cwd = getCwd();
+var cwd = getCwd(doc.baseURI);
 
 proto.createdCallback = function() {
   var shadow = this.createShadowRoot();
@@ -53,9 +53,9 @@ proto.createdCallback = function() {
 
 document.registerElement('x-sushiyuki', { prototype: proto });
 
-function getCwd() {
+function getCwd(url) {
   var a = document.createElement('a');
-  a.href = doc.baseURI;
+  a.href = url;
 
   var origin = a.protocol + '//' + a.host;
   var pathname = a.pathname;

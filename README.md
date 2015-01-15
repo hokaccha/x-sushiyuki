@@ -15,7 +15,7 @@ $ bower install hokaccha/x-sushiyuki
 load modules.
 
 ```html
-<script src="bower_components/platform/platform.js"></script>
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 <link rel="import" href="bower_components/x-sushiyuki/x-sushiyuki.html">
 ```
 
